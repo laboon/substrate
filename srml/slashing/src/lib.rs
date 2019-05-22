@@ -2,13 +2,14 @@
 
 //! Abstract slashing interface
 //!
-//! That gives functionality to specialize slash and misconduct for a given type
+//! That gives functionality to specialize slashing and misconduct for a given type
 //! In order to customize severity level and misconduct fees.
 //!
 //! TODO(niklasad1): provide default impl?
 //! TODO(niklasad1): move the `srml/support/src/traits.rs`?
+//! TODO(niklasad1): chain reversion are ignored, do we need specific method/function for that?
 //!
-//! For example an use case could be to increase severity level exponentially on concurrent
+//! For example an use case could be to increase severity level exponentially on concurrent culprits
 
 /// # Examples
 ///	```
@@ -27,7 +28,7 @@
 ///
 ///		fn on_slash(
 ///			severity: Self::Severity,
-///			_who: Self::AccountId,
+///			who: Self::AccountId,
 ///			balance: Self::Balance,
 ///			misconduct: impl Misconduct<Balance = Self::Balance>
 ///		) -> (Self::Balance, Self::Severity) {
