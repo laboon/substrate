@@ -7,7 +7,6 @@
 //!
 //! TODO(niklasad1): provide default impl?
 //! TODO(niklasad1): move the `srml/support/src/traits.rs`?
-//! TODO(niklasad1): chain reversion are ignored, do we need specific method/function for that?
 //!
 //! For example an use case could be to increase severity level exponentially on concurrent culprits
 
